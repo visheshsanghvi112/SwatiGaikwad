@@ -308,10 +308,12 @@ export const MediaModal: React.FC<MediaModalProps> = ({ item, onClose }) => {
           }
           .modal-content-grid {
             border-radius: var(--radius-2xl) var(--radius-2xl) 0 0 !important;
-            max-height: 88vh !important;
+            max-height: min(88dvh, 88vh) !important;
             margin-top: auto !important;
             width: 100% !important;
             border-bottom: none !important;
+            overflow-y: auto !important;
+            padding-bottom: calc(0.85rem + env(safe-area-inset-bottom, 0px)) !important;
           }
           .ios-sheet-handle {
             display: block;

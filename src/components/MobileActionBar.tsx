@@ -10,15 +10,18 @@ export const MobileActionBar: React.FC = () => {
       style={{
         position: 'fixed',
         bottom: 'calc(0.85rem + env(safe-area-inset-bottom, 0px))',
-        left: '1rem',
-        right: '1rem',
+        left: 0,
+        right: 0,
+        margin: '0 auto',
+        width: 'calc(100% - 1.75rem)',
+        maxWidth: '460px',
         zIndex: 45,
-        backgroundColor: 'rgba(250, 247, 242, 0.88)',
-        backdropFilter: 'blur(28px) saturate(210%)',
-        WebkitBackdropFilter: 'blur(28px) saturate(210%)',
+        backgroundColor: 'rgba(250, 247, 242, 0.9)',
+        backdropFilter: 'blur(30px) saturate(210%)',
+        WebkitBackdropFilter: 'blur(30px) saturate(210%)',
         borderRadius: 'var(--radius-full)',
-        border: '1px solid rgba(255, 255, 255, 0.8)',
-        boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 16px 36px -4px rgba(18, 19, 21, 0.16)',
+        border: '1px solid rgba(255, 255, 255, 0.85)',
+        boxShadow: 'inset 0 1px 0.5px rgba(255, 255, 255, 0.95), 0 16px 36px -4px rgba(18, 19, 21, 0.16)',
         padding: '0.45rem 0.65rem',
         display: 'flex',
         alignItems: 'center',
@@ -108,6 +111,18 @@ export const MobileActionBar: React.FC = () => {
         @media (min-width: 769px) {
           .mobile-quick-actions {
             display: none !important;
+          }
+        }
+        @media (max-width: 375px) {
+          .mobile-quick-actions {
+            padding: 0.35rem 0.45rem !important;
+            gap: 0.35rem !important;
+            width: calc(100% - 1.25rem) !important;
+          }
+          .mobile-quick-actions a {
+            font-size: 0.75rem !important;
+            padding-left: 0.55rem !important;
+            padding-right: 0.55rem !important;
           }
         }
       `}</style>

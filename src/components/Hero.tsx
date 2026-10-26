@@ -15,9 +15,9 @@ export const Hero: React.FC = () => {
       className="hero-section"
       style={{
         position: 'relative',
-        paddingTop: 'calc(8rem + env(safe-area-inset-top, 0px))',
+        paddingTop: 'calc(7.5rem + env(safe-area-inset-top, 0px))',
         paddingBottom: '5rem',
-        minHeight: '94vh',
+        minHeight: 'min(94dvh, 880px)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -191,6 +191,19 @@ export const Hero: React.FC = () => {
               margin: '0 auto',
             }}
           >
+            {/* Ambient OLED Radial Backlight */}
+            <div
+              className="hero-ambient-glow"
+              style={{
+                position: 'absolute',
+                inset: '-24px',
+                background: 'radial-gradient(ellipse at 50% 45%, rgba(184, 93, 67, 0.28) 0%, rgba(194, 162, 122, 0.16) 45%, transparent 70%)',
+                filter: 'blur(30px)',
+                zIndex: 0,
+                pointerEvents: 'none',
+              }}
+            />
+
             {/* Background Aesthetic Layer */}
             <div
               className="hero-portrait-backdrop"
@@ -499,18 +512,49 @@ export const Hero: React.FC = () => {
             grid-template-columns: 1.15fr 0.85fr !important;
           }
         }
+        @media (max-width: 959px) {
+          .hero-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1.5rem !important;
+          }
+          .hero-left-column {
+            display: contents !important;
+          }
+          .hero-identity-pills {
+            order: 1 !important;
+          }
+          .hero-headline {
+            order: 2 !important;
+          }
+          .hero-subheadline {
+            order: 3 !important;
+          }
+          .hero-portrait-column {
+            order: 4 !important;
+            width: 100% !important;
+            max-width: 380px !important;
+            margin: 0.85rem auto 2.25rem auto !important;
+          }
+          .hero-intro {
+            order: 5 !important;
+          }
+          .hero-cta-group {
+            order: 6 !important;
+          }
+          .hero-trust-strip {
+            order: 7 !important;
+          }
+        }
         @media (max-width: 768px) {
           .hero-section {
             padding-top: calc(5.25rem + env(safe-area-inset-top, 0px)) !important;
             padding-bottom: 2.5rem !important;
             min-height: auto !important;
           }
-          .hero-grid {
-            gap: 2.25rem !important;
-          }
           .hero-identity-pills {
             gap: 0.45rem !important;
-            margin-bottom: 1.25rem !important;
+            margin-bottom: 1rem !important;
           }
           .hero-identity-pills .badge-editorial {
             font-size: 0.6875rem !important;
@@ -519,11 +563,11 @@ export const Hero: React.FC = () => {
           .hero-headline {
             font-size: clamp(2rem, 7.5vw, 2.75rem) !important;
             line-height: 1.12 !important;
-            margin-bottom: 1rem !important;
+            margin-bottom: 0.85rem !important;
           }
           .hero-subheadline {
             font-size: clamp(0.98rem, 3.8vw, 1.15rem) !important;
-            margin-bottom: 1.15rem !important;
+            margin-bottom: 1rem !important;
             line-height: 1.4 !important;
           }
           .hero-intro {
@@ -550,9 +594,7 @@ export const Hero: React.FC = () => {
             padding-top: 1rem !important;
           }
           .hero-portrait-column {
-            width: 100% !important;
-            max-width: 360px !important;
-            margin: 0 auto 1.5rem auto !important;
+            max-width: 350px !important;
           }
           .hero-portrait-backdrop {
             inset: -6px !important;
@@ -587,6 +629,33 @@ export const Hero: React.FC = () => {
           }
           .hero-stat-label {
             font-size: 0.65rem !important;
+          }
+        }
+        @media (max-width: 375px) {
+          .hero-portrait-column {
+            max-width: 295px !important;
+          }
+          .hero-headline {
+            font-size: 1.85rem !important;
+          }
+          .hero-subheadline {
+            font-size: 0.92rem !important;
+          }
+          .hero-experience-badge {
+            padding: 0.6rem 0.85rem !important;
+            bottom: -0.85rem !important;
+          }
+          .hero-stats-grid {
+            gap: 0.5rem !important;
+          }
+          .hero-stat-card {
+            padding: 0.75rem 0.65rem !important;
+          }
+          .hero-stat-value {
+            font-size: 1.3rem !important;
+          }
+          .hero-stat-label {
+            font-size: 0.6rem !important;
           }
         }
       `}</style>

@@ -317,6 +317,16 @@ export const About: React.FC = () => {
             padding: 0.85rem 1.25rem !important;
           }
         }
+        @media (max-width: 375px) {
+          .about-profile-card > div:first-child {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.75rem !important;
+          }
+          .about-pullquote {
+            padding: 1.15rem 1rem !important;
+          }
+        }
       `}</style>
     </section>
   );

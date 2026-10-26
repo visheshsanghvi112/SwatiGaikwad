@@ -261,12 +261,14 @@ export const Navbar: React.FC = () => {
             position: 'fixed',
             inset: 0,
             zIndex: 48,
-            backgroundColor: 'rgba(250, 247, 242, 0.94)',
-            backdropFilter: 'blur(36px) saturate(200%)',
-            WebkitBackdropFilter: 'blur(36px) saturate(200%)',
+            backgroundColor: 'rgba(250, 247, 242, 0.96)',
+            backdropFilter: 'blur(36px) saturate(220%)',
+            WebkitBackdropFilter: 'blur(36px) saturate(220%)',
             display: 'flex',
             flexDirection: 'column',
-            padding: 'calc(5.5rem + env(safe-area-inset-top, 0px)) 1.75rem calc(2.5rem + env(safe-area-inset-bottom, 0px))',
+            padding: 'calc(5.25rem + env(safe-area-inset-top, 0px)) 1.5rem calc(2.25rem + env(safe-area-inset-bottom, 0px))',
+            overflowY: 'auto',
+            maxHeight: '100dvh',
             animation: 'fadeInUp 240ms var(--spring-snappy) forwards',
           }}
         >
@@ -296,7 +298,7 @@ export const Navbar: React.FC = () => {
             ))}
           </div>
 
-          <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingTop: '1.5rem' }}>
             <a
               href={PORTFOLIO_DATA.personal.whatsappUrl}
               target="_blank"
@@ -340,6 +342,21 @@ export const Navbar: React.FC = () => {
           .nav-brand-status {
             font-size: 0.575rem !important;
             letter-spacing: 0.08em !important;
+          }
+        }
+        @media (max-width: 375px) {
+          .ios-nav-island {
+            padding: 0.45rem 0.75rem !important;
+          }
+          .nav-brand-name {
+            font-size: 1rem !important;
+          }
+          .nav-brand-status span:last-child {
+            max-width: 135px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
           }
         }
       `}</style>

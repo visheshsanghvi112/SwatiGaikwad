@@ -496,6 +496,14 @@ export const MediaGallery: React.FC = () => {
             gap: 1.25rem !important;
           }
         }
+        @media (max-width: 375px) {
+          .media-spotlight-card {
+            padding: 1rem 0.85rem !important;
+          }
+          .gallery-item-card {
+            border-radius: var(--radius-lg) !important;
+          }
+        }
       `}</style>
     </section>
   );

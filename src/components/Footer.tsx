@@ -230,6 +230,19 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .footer-section {
+            padding-top: 3.5rem !important;
+          }
+        }
+        @media (max-width: 375px) {
+          .footer-section > div > div:first-child {
+            gap: 2rem !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 };

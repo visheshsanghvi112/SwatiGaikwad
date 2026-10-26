@@ -491,6 +491,13 @@ export const Contact: React.FC = () => {
             flex: 1 1 100% !important;
           }
         }
+        @media (max-width: 375px) {
+          .contact-section .ios-dark-glass,
+          .contact-section .ios-glass-card {
+            padding: 1.15rem 0.85rem !important;
+            border-radius: var(--radius-lg) !important;
+          }
+        }
       `}</style>
     </section>
   );

@@ -434,6 +434,14 @@ export const Pathways: React.FC = () => {
             padding: 1.5rem !important;
           }
         }
+        @media (max-width: 375px) {
+          .pathway-card > div:last-child {
+            padding: 1.15rem 1rem !important;
+          }
+          .pathway-banner {
+            height: 150px !important;
+          }
+        }
       `}</style>
     </section>
   );

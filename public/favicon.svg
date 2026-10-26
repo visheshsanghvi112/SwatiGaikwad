@@ -1,5 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#1C1D1F"/>
-  <text x="32" y="42" font-family="'Cormorant Garamond', serif, Georgia" font-size="32" font-weight="600" fill="#E8D8C8" text-anchor="middle">SG</text>
-  <circle cx="50" cy="18" r="3.5" fill="#C86D51"/>
+  <defs>
+    <style>
+      .bg { fill: #0D0E10; }
+      .border { stroke: #B85D43; stroke-width: 1.5; stroke-opacity: 0.6; fill: none; }
+      .monogram { fill: #F4EBE0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 600; text-anchor: middle; }
+      .dot { fill: #B85D43; }
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #121315; }
+        .monogram { fill: #FAF7F2; }
+      }
+    </style>
+  </defs>
+  <rect class="bg" width="64" height="64" rx="15"/>
+  <rect class="border" x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25"/>
+  <text class="monogram" x="32" y="42.5">SG</text>
+  <circle class="dot" cx="49" cy="17" r="3.5"/>
 </svg>

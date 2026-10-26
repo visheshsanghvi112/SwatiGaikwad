@@ -1,0 +1,9 @@
+# Robots.txt for Swati Gaikwad Professional Portfolio
+User-agent: *
+Allow: /
+
+# Host
+Host: https://swatigaikwad.in
+
+# Sitemaps
+Sitemap: https://swatigaikwad.in/sitemap.xml

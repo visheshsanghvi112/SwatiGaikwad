@@ -62,6 +62,8 @@ export const Pathways: React.FC = () => {
               <img
                 src={PORTFOLIO_DATA.pathways.realEstate.backgroundImage}
                 alt="Modern Real Estate Architectural Interior"
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -247,6 +249,8 @@ export const Pathways: React.FC = () => {
               <img
                 src={PORTFOLIO_DATA.pathways.contentBrand.backgroundImage}
                 alt="Swati Gaikwad Content Reel Frame"
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: '100%',

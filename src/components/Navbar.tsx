@@ -100,6 +100,9 @@ export const Navbar: React.FC = () => {
               <img
                 src={PORTFOLIO_DATA.personal.avatarSmall}
                 alt="Swati Gaikwad"
+                width="34"
+                height="34"
+                decoding="async"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>

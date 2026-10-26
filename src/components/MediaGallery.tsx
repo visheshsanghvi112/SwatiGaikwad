@@ -90,6 +90,10 @@ export const MediaGallery: React.FC = () => {
                 <img
                   src="/assets/swati_avatar_300.jpg"
                   alt="Swati Gaikwad Profile"
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '64px',
                     height: '64px',
@@ -243,6 +247,7 @@ export const MediaGallery: React.FC = () => {
                   src={item.thumbnailUrl}
                   alt={item.title}
                   loading="lazy"
+                  decoding="async"
                   style={{
                     width: '100%',
                     height: '100%',

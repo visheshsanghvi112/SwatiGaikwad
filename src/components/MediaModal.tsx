@@ -119,6 +119,7 @@ export const MediaModal: React.FC<MediaModalProps> = ({ item, onClose }) => {
           <img
             src={item.thumbnailUrl}
             alt={item.title}
+            decoding="async"
             style={{
               width: '100%',
               height: '100%',
@@ -255,6 +256,9 @@ export const MediaModal: React.FC<MediaModalProps> = ({ item, onClose }) => {
               <img
                 src="/assets/swati_avatar_300.jpg"
                 alt="Swati Gaikwad"
+                width="38"
+                height="38"
+                decoding="async"
                 style={{ width: '38px', height: '38px', borderRadius: '50%', objectFit: 'cover', border: '1.5px solid var(--color-terracotta)' }}
               />
               <div style={{ flex: 1 }}>

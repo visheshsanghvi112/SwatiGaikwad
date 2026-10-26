@@ -115,6 +115,10 @@ export const About: React.FC = () => {
                 <img
                   src={PORTFOLIO_DATA.personal.avatarImage}
                   alt="Swati Gaikwad - Instagram Profile"
+                  width="68"
+                  height="68"
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '68px',
                     height: '68px',

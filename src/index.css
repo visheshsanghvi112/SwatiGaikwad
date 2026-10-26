@@ -764,3 +764,31 @@ input, textarea, select {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   NON-COMPROMISING PERFORMANCE OPTIMIZATIONS (120Hz PROMOTION & RENDERING)
+   ========================================================================== */
+
+/* GPU Layer Promotion for Silky 120 FPS Interaction */
+.ios-glass-card,
+.ios-dark-glass,
+.btn,
+.ios-pressable,
+.ios-segment-btn,
+.hero-portrait-frame {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Off-Screen Paint Optimization: Defers Layout & Paint Until Near Viewport */
+.timeline-section,
+.skills-section,
+.personality-section,
+.education-section,
+.media-section,
+.contact-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 650px;
+}
+

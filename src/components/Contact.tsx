@@ -95,6 +95,10 @@ export const Contact: React.FC = () => {
                   <img
                     src={PORTFOLIO_DATA.personal.avatarImage}
                     alt="Swati Gaikwad"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       width: '64px',
                       height: '64px',

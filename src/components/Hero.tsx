@@ -247,6 +247,9 @@ export const Hero: React.FC = () => {
                 <img
                   src={PORTFOLIO_DATA.personal.primaryPortrait}
                   alt="Swati Gaikwad - Real Estate Sourcing Manager & Content Creator"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -254,8 +257,6 @@ export const Hero: React.FC = () => {
                     objectPosition: 'center 10%',
                     transition: 'transform 700ms var(--spring-fluid)',
                   }}
-                  loading="eager"
-                  fetchPriority="high"
                 />
 
                 {/* Subtle gradient overlay at bottom for card text */}
@@ -340,6 +341,9 @@ export const Hero: React.FC = () => {
                   <img
                     src={PORTFOLIO_DATA.personal.avatarSmall}
                     alt="Swati Gaikwad Profile"
+                    width="34"
+                    height="34"
+                    decoding="async"
                     style={{
                       width: '34px',
                       height: '34px',
